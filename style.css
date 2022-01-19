@@ -145,6 +145,66 @@ body {
 .instructions {
   margin: 1rem auto 0;
 }
+/* ripple button */
+.button {
+  position: relative;
+  background-color: yellow;
+  border: none;
+  
+  font-size: 16px;
+  color: black;
+  padding: 12px 18px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+.button:after {
+  content: "";
+  background: #f1f1f1;
+
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.button:active:after {
+  
+  padding: 0;
+  margin: 0;
+  opacity: 0.5;
+  transition: 0s;
+}
+
+
+
+/* nav and footer tag content */
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  list-style: none;
+  padding: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  margin: 0 1em;
+  color: gray;
+}
+
+li.name {
+  color:white;
+  margin-right: auto;
+}
 
 /* Button - Add it from the README instructions */
 button,
@@ -154,7 +214,7 @@ input {
   background: #ffffff;
   border: 1px solid #000000;
   box-sizing: border-box;
-  border-radius: 4px;
+  
   padding: 0.5rem 1rem;
   transition: 500ms;
 }
